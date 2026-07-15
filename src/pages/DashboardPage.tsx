@@ -15,7 +15,7 @@ import ModuleCard from '../components/ModuleCard';
 import ModuleForm from '../components/ModuleForm';
 import ParticipantTable from '../components/ParticipantTable';
 import { moduleService } from '../services/module.service';
-import { Module } from '../types';
+import type { Module } from '../types';
 
 const DashboardPage: React.FC = () => {
   const [modules, setModules] = useState<Module[]>([]);

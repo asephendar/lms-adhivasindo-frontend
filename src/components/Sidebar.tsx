@@ -23,7 +23,7 @@ import {
 import { useAuth } from '../contexts/AuthContext';
 
 const Sidebar: React.FC = () => {
-  const { logout, user } = useAuth();
+  const { logout } = useAuth();
 
   const mainMenu = [
     { label: 'Dashboard', icon: <DashboardIcon />, active: true },

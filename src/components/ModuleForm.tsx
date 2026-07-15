@@ -9,7 +9,7 @@ import {
   Grid,
   MenuItem
 } from '@mui/material';
-import { Module } from '../types';
+import type { Module } from '../types';
 
 interface ModuleFormProps {
   open: boolean;

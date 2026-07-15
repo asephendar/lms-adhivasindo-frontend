@@ -1,5 +1,5 @@
 import api from './api';
-import { Module, ApiListResponse, ApiResponse } from '../types';
+import type { Module, ApiListResponse, ApiResponse } from '../types';
 
 export interface ModuleFilters {
   search?: string;
