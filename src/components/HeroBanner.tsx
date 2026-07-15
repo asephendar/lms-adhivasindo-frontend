@@ -1,25 +1,38 @@
 import React from 'react';
-import { Box, Typography, Button, Grid } from '@mui/material';
+import { Box, Typography, Button, Grid, useMediaQuery, useTheme } from '@mui/material';
 import { Person as PersonIcon, CalendarToday as CalendarIcon } from '@mui/icons-material';
 
 const HeroBanner: React.FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <Box
       sx={{
         background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
         borderRadius: 3,
-        p: 4,
+        p: { xs: 2, sm: 3, md: 4 },
         color: 'white',
-        mb: 3
+        mb: 3,
+        width: '100%'
       }}
     >
-      <Typography variant="overline" sx={{ color: 'rgba(255,255,255,0.8)', fontWeight: 'bold' }}>
+      <Typography
+        variant="overline"
+        sx={{ color: 'rgba(255,255,255,0.8)', fontWeight: 'bold', fontSize: { xs: '0.65rem', md: '0.75rem' } }}
+      >
         PEMROGRAMAN
       </Typography>
-      <Typography variant="h4" fontWeight="bold" sx={{ mt: 1, mb: 2 }}>
+      <Typography
+        variant={isMobile ? 'h5' : 'h4'}
+        sx={{ fontWeight: 'bold', mt: 1, mb: 2 }}
+      >
         Pemrograman Frontend Modern dengan React dan Angular
       </Typography>
-      <Typography variant="body1" sx={{ mb: 3, maxWidth: 600, color: 'rgba(255,255,255,0.9)' }}>
+      <Typography
+        variant="body1"
+        sx={{ mb: 3, maxWidth: 600, color: 'rgba(255,255,255,0.9)', fontSize: { xs: '0.9rem', md: '1rem' } }}
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Belajar membangun aplikasi web modern dengan teknologi terkini.
       </Typography>
       <Grid container spacing={2} alignItems="center" sx={{ mb: 3 }}>

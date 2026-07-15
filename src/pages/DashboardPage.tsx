@@ -116,13 +116,15 @@ const DashboardPage: React.FC = () => {
         </Button>
       </Box>
 
-      <Grid container spacing={3} sx={{ mb: 4 }}>
-        {modules.map((module) => (
-          <Grid item xs={12} md={6} lg={4} key={module.id}>
-            <ModuleCard module={module} onEdit={handleEdit} onDelete={handleDelete} />
-          </Grid>
-        ))}
-      </Grid>
+      <Box sx={{ width: '100%', overflowX: 'hidden' }}>
+        <Grid container spacing={3} sx={{ mb: 4 }}>
+          {modules.map((module) => (
+            <Grid item xs={12} sm={6} lg={4} key={module.id}>
+              <ModuleCard module={module} onEdit={handleEdit} onDelete={handleDelete} />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
 
       {meta.totalPages > 1 && (
         <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
