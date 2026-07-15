@@ -1,32 +1,74 @@
-# React + TypeScript + Vite
+# LMS Adhivasindo - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Frontend aplikasi Learning Management System untuk Take Home Test Fullstack Developer di PT. Adhikari Inovasi Indonesia (Adhivasindo).
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React.js
+- TypeScript
+- Vite
+- Material-UI (MUI)
+- Axios
+- React Router DOM
 
-## React Compiler
+## Fitur
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Halaman Login dan Register
+- Dashboard LMS dengan layout sesuai design
+- CRUD Modul (Create, Read, Update, Delete)
+- Search dan Pagination
+- Responsive design
 
-## Expanding the Oxlint configuration
+## Prasyarat
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- Node.js (LTS)
+- Backend API sudah berjalan di `http://localhost:5000`
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Cara Menjalankan
+
+### 1. Install Dependencies
+
+```bash
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### 2. Konfigurasi Environment
+
+Copy file environment example:
+
+```bash
+cp .env.example .env
+```
+
+File `.env` default sudah mengarah ke backend lokal:
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+### 3. Jalankan Development Server
+
+```bash
+npm run dev
+```
+
+Aplikasi akan berjalan di `http://localhost:5173`
+
+## Build untuk Production
+
+```bash
+npm run build
+```
+
+Hasil build akan ada di folder `dist/`.
+
+## Akun Demo
+
+Setelah backend di-seed, gunakan akun berikut untuk login:
+
+- Email: `admin@adhivasindo.co.id`
+- Password: `admin123`
+
+## Backend API
+
+Repo backend: [lms-adhivasindo-backend](https://github.com/username/lms-adhivasindo-backend)
