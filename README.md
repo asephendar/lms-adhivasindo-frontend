@@ -71,4 +71,4 @@ Setelah backend di-seed, gunakan akun berikut untuk login:
 
 ## Backend API
 
-Repo backend: [lms-adhivasindo-backend](https://github.com/username/lms-adhivasindo-backend)
+Repo backend: [lms-adhivasindo-backend](https://github.com/asephendar/lms-adhivasindo-backend)
